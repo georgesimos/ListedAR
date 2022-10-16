@@ -1,0 +1,57 @@
+{
+  "name": "listedAR",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.17.10",
+    "@react-native-community/geolocation": "^2.1.0",
+    "@react-native-masked-view/masked-view": "^0.2.7",
+    "@react-navigation/bottom-tabs": "^6.3.3",
+    "@react-navigation/native": "^6.0.12",
+    "@react-navigation/native-stack": "^6.8.0",
+    "@react-navigation/stack": "^6.2.3",
+    "@viro-community/react-viro": "^2.23.0",
+    "fbjs": "^3.0.4",
+    "firebase": "^9.9.4",
+    "proj4": "^2.7.0",
+    "react": "17.0.2",
+    "react-native": "0.65.1",
+    "react-native-dropdown-picker": "^5.4.2",
+    "react-native-elements": "^3.1.0",
+    "react-native-geolocation-service": "^5.1.1",
+    "react-native-gesture-handler": "^2.6.0",
+    "react-native-google-maps-directions": "^2.1.1",
+    "react-native-google-places-autocomplete": "^2.4.1",
+    "react-native-image-picker": "^4.10.0",
+    "react-native-maps": ">=1.0.0",
+    "react-native-maps-directions": "^1.9.0",
+    "react-native-paper": "^4.12.4",
+    "react-native-permissions": "^3.0.3",
+    "react-native-reanimated": "^2.10.0",
+    "react-native-safe-area-context": "^4.3.3",
+    "react-native-screens": "^3.17.0",
+    "react-native-toast-message": "^2.1.5",
+    "react-native-vector-icons": "^9.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "7.15.0",
+    "@babel/runtime": "7.15.3",
+    "@react-native-community/eslint-config": "3.0.0",
+    "babel-jest": "27.0.6",
+    "eslint": "7.32.0",
+    "jest": "27.0.6",
+    "metro-react-native-babel-preset": "0.66.2",
+    "react-native-codegen": "0.0.7",
+    "react-test-renderer": "17.0.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}

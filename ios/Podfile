@@ -1,0 +1,64 @@
+require_relative '../node_modules/react-native/scripts/react_native_pods'
+require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+platform :ios, '13.0'
+
+target 'PersonalizedTour' do
+  config = use_native_modules!
+
+  use_react_native!(
+    :path => config[:reactNativePath],
+    # to enable hermes on iOS, change `false` to `true` and then install pods
+    :hermes_enabled => false
+  )
+  permissions_path = '../node_modules/react-native-permissions/ios'
+  rn_maps_path = '../node_modules/react-native-maps'
+
+  pod 'ViroReact', :path => '../node_modules/@viro-community/react-viro/ios'
+  pod 'ViroKit', :path => '../node_modules/@viro-community/react-viro/ios/dist/ViroRenderer/'
+
+  pod 'Permission-Camera', :path => "#{permissions_path}/Camera"
+
+  # React Native Maps dependencies
+  pod 'react-native-google-maps', :path => rn_maps_path
+  # pod 'GoogleMaps'
+  # pod 'Google-Maps-iOS-Utils'
+
+  # # Add the Firebase pod for Google Analytics
+  # pod 'FirebaseAnalytics', :modular_headers => true
+
+  # # For Analytics without IDFA collection capability, use this pod instead
+  # # pod ‘Firebase/AnalyticsWithoutAdIdSupport’
+
+  # # Add the pods for any other Firebase products you want to use in your app
+  # # For example, to use Firebase Authentication and Cloud Firestore
+  # pod 'Firebase', :modular_headers => true
+  # pod 'FirebaseCore', :modular_headers => true
+  # pod 'FirebaseCoreInternal', :modular_headers => true
+  # pod 'GoogleUtilities', :modular_headers => true
+
+
+  target 'PersonalizedTourTests' do
+    inherit! :complete
+    # Pods for testing
+  end
+
+  # Enables Flipper.
+  #
+  # Note that if you have use_frameworks! enabled, Flipper will not work and
+  # you should disable the next line.
+  #use_flipper!()
+
+  post_install do |installer|
+    react_native_post_install(installer)
+  end
+end
+
+target 'PersonalizedTour-tvOS' do
+  # Pods for PersonalizedTour-tvOS
+
+  target 'PersonalizedTour-tvOSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+end
